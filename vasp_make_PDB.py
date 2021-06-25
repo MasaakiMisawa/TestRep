@@ -17,7 +17,7 @@ def make_PDB():
     print('open: %s' %(filnam))
     while True:
       dat = fp.readline().split(); 
-      if dat == []: break 
+      if len(dat) == 0: break 
       fac = float(fp.readline().split()[0])
       cel = np.array([])
       for i in range(3): cel = np.append(cel, np.array(fp.readline().split(), dtype='float'))
